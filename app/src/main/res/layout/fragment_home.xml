@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="androidhive.info.materialdesign.activity.HomeFragment">
+
+        <LinearLayout
+            android:id="@+id/vUserProfileRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:background="#ff7bba09"
+            android:orientation="vertical"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:padding="24dp"
+            android:baselineAligned="true">
+
+            <LinearLayout
+                android:clipChildren="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivUserProfilePhoto"
+                    android:layout_width="@dimen/user_profile_avatar_size"
+                    android:layout_height="@dimen/user_profile_avatar_size"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="-10dp"
+                    android:src="@drawable/avatar"/>
+
+                <LinearLayout
+                    android:id="@+id/vUserDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Prince Anim"
+                        android:textColor="#ffffff"
+                        android:textSize="24sp" />
+
+                    <!--<TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="\@jsmith"
+                        android:textSize="12sp"
+                        android:textColor="#bbbbbb" />-->
+
+                    <TextView
+                        android:id="@+id/cat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="carpenter"
+                        android:textColor="#ffffff" />
+
+
+                    <Button
+                        android:id="@+id/btnFollow"
+                        android:layout_width="match_parent"
+                        android:background="?attr/colorPrimary"
+                        android:textColor="#ffffff"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="24dp"
+                        android:textSize="12sp"
+                        android:text="Want"
+                        android:visibility="gone"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+  </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/vUserProfileRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gh">
+            <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_user_profile_options"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+            </LinearLayout>
+
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_below="@+id/gh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="100dp"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            />
+
+
+
+
+    <ImageButton
+            android:id="@+id/btnCamera"
+            android:layout_width="@dimen/btn_fab_size"
+            android:layout_height="@dimen/btn_fab_size"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/btn_fab_margins"
+            android:layout_marginRight="@dimen/btn_fab_margins"
+            android:background="@drawable/btn_fab_default"
+            android:elevation="@dimen/default_elevation"
+            android:src="@drawable/ic_instagram_white"
+            android:textSize="28sp" />
+
+
+    </RelativeLayout>
